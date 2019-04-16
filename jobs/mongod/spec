@@ -41,11 +41,11 @@ properties:
       properties:
         mongod:
           replset_nodes:
-          - node: ***REMOVED***:27017
+          - node: hostname:27017
             arbiter: false
-          - node: ***REMOVED***:27017
+          - node: hostname:27017
             arbiter: true
-          - node: ***REMOVED***:27017
+          - node: hostname:27017
             arbiter: false
 
   mongod.arbiter:
