@@ -41,11 +41,11 @@ properties:
       properties:
         mongod:
           replset_nodes:
-          - node: slu-ct-scmsmongo-m-db-001.sas.bskyb.com:27017
+          - node: hostname:27017
             arbiter: false
-          - node: slu-ct-scmsmongo-m-db-002.sas.bskyb.com:27017
+          - node: hostname:27017
             arbiter: true
-          - node: hem-ct-scmsmongo-m-db-001.sas.bskyb.com:27017
+          - node: hostname:27017
             arbiter: false
 
   mongod.arbiter:
