@@ -54,6 +54,13 @@ properties:
   mongod.quota_enabled:
     description: Should db size quota be enabled?
     default: true
+  mongod.quota_value:
+    description: |
+    This value is the limit of data files per database. Each data file can use up to 2GB of disk space.
+    Limit to the number of data files is 16000.
+    (https://docs.mongodb.com/v3.4/core/mmapv1/)
+    (https://docs.mongodb.com/v3.4/reference/configuration-options/#storage.mmapv1.quota.maxFilesPerDB)
+    default: 25
   mongod.admin_user:
     description: Admin user
     default: admin

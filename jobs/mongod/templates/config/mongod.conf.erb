@@ -14,7 +14,7 @@ storage:
   <% if p('mongod.quota_enabled') %>
   quota:
     enforced: true
-    maxFilesPerDB: 16
+    maxFilesPerDB: <%= p("mongod.quota_value") %>
   <% end %>
 
 security:
