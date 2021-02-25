@@ -1,6 +1,6 @@
 Before creating release please download mongodb-3.6.22.tgz from https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-ubuntu1604-3.6.22.tgz and place it in to /src/mongod directory.
 
-Below should be run done only on brand new deployment.
+Below should be run only on brand new deployment.
 
 To bootstrap replica set and create an admin user:
 
