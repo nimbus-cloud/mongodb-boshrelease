@@ -1,0 +1,5 @@
+name: mongodb
+blobstore:
+  provider: nimbus
+  options:
+    bucket_name: null

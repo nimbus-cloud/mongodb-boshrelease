@@ -7,13 +7,17 @@ mkdir -p $LOG_DIR
 chown -R $RUNAS:$RUNAS  $LOG_DIR
 
 cd /var/vcap/packages/pymongo
-tar xfz setuptools-1.4.2.tar.gz
-tar xfz pymongo-3.0.3.tar.gz
+tar xfz setuptools-41.1.0.tar.gz
+tar xfz mongo-python-driver-3.8.0.tar.gz
+tar zxf python-2.7.12-Xenial.tar.gz
 
-cd setuptools-1.4.2
+apt install ./*.deb >>$LOG_DIR/setuptools.stdout.log 2>>$LOG_DIR/steuptools.stderr.log
+
+cd setuptools-41.1.0
+python bootstrap.py install >>$LOG_DIR/setuptools.stdout.log 2>>$LOG_DIR/steuptools.stderr.log
 /usr/bin/python setup.py install >>$LOG_DIR/setuptools.stdout.log 2>>$LOG_DIR/steuptools.stderr.log
 cd ..
-cd pymongo-3.0.3
+cd mongo-python-driver-3.8.0
 /usr/bin/python setup.py install >>$LOG_DIR/pymongo.stdout.log 2>>$LOG_DIR/pymongo.stderr.log
 
-python /var/vcap/jobs/mongod/bin/step_down_if_primary.py
+/usr/bin/python /var/vcap/jobs/mongod/bin/step_down_if_primary.py

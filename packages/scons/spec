@@ -1,7 +1,0 @@
----
-name: scons
-
-dependencies: []
-
-files:
-- scons/**/*

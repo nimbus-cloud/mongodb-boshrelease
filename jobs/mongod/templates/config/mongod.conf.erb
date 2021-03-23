@@ -23,6 +23,7 @@ security:
 
 net:
   port: <%= p("mongod.port") %>
+  bindIpAll: true
 
 replication:
   replSetName: <%= p("mongod.replset_name") %>

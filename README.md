@@ -1,3 +1,7 @@
+Before becreating release please download mongodb-3.6.22-src-bin.tgz from https://s4-viewer.cf.paas.bskyb.com/mongodb/mongodb-3.6.22-src-bin.tgz, remane it to mongodb-3.6.22.tgz and place it in to /src/mongod/ directory.
+
+Below should be run only on brand new deployment.
+
 To bootstrap replica set and create an admin user:
 
 1. Pick a non-arbiter node after all nodes are deployed
@@ -15,7 +19,5 @@ To bootstrap replica set and create an admin user:
 Currently I cannot think of a way of automating this, hence these two scripts has to be run manually.
 
 Automation is problematic because:
-1. Our deployment is stretched across two DC (deployed with 2 different boshes)
-2. These two scripts should be run when all vms have been deployed. See (1)
-3. Because we have a replica set name in the config, it is not possible to create admin user
-before replica set is bootstrapped.
+1. These two scripts should be run when all vms have been deployed. See (1)
+2. Because we have a replica set name in the config, it is not possible to create admin user before replica set is bootstrapped.
