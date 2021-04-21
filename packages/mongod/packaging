@@ -2,8 +2,8 @@
 set -e
 cd mongod
 
-tar xfz mongodb-3.6.22.tgz
-cd mongodb-linux-x86_64-ubuntu1604-3.6.22
+tar xfz mongodb-4.0.23.tgz
+cd mongodb-linux-x86_64-ubuntu1604-4.0.23
 
 #/var/vcap/packages/scons/bin/scons core -j4 --dbg=off --opt=off --disable-warnings-as-errors
 
