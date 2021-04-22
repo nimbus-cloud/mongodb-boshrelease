@@ -8,7 +8,7 @@ storage:
   dbPath: /var/vcap/store/mongod
   directoryPerDB: true
   journal:
-    enabled: <%= !p('mongod.arbiter') %>
+    enabled: true
   mmapv1:
     smallFiles: true
   <% if p('mongod.quota_enabled') %>
@@ -27,3 +27,4 @@ net:
 
 replication:
   replSetName: <%= p("mongod.replset_name") %>
+  enableMajorityReadConcern: false
