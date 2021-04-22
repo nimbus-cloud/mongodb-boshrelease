@@ -1,6 +1,6 @@
 Before becreating release please download mongodb-4.0.23-src-bin.tgz from https://s4-viewer.cf.paas.bskyb.com/mongodb/mongodb-4.0.23-src-bin.tgz, remane it to mongodb-4.0.23.tgz and place it in to /src/mongod/ directory.
 
-Below should be run done only on brand new deployment.
+Below should be run only on brand new deployment.
 
 To bootstrap replica set and create an admin user:
 
